@@ -1,6 +1,7 @@
 ---
 plan: morning-digest
-status: ready
+status: done
+closed: 2026-10-31
 owner: rook
 opened: 2026-10-29
 ---
@@ -20,7 +21,7 @@ error, first and last time. One JSON object per line (`at`, `job`, `status`: `ok
 `owner`, optional `error`).
 
 - A line that doesn't parse is counted, never thrown. The night still renders.
-- `owner` can be `null`. Keep the row; show the owner as `—`.
+- `owner` can be `null`. Keep the row; show the owner as `â€”`.
 - Lives in `src/digest/`. Commit `src/digest/types.ts` first (the `DigestRow` type and the
   `readNight(runsDir, night)` signature), so every part of section 2 can start against it.
 
@@ -77,3 +78,17 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader | — | cursor · composer · high | 2026-10-31 |
+| 2 | Digest HTML page | #1 | cursor · composer · high | 2026-10-31 |
+| 3 | Digest JSON API | #1 | cursor · composer · high | 2026-10-31 |
+| 4 | Board link to digests | #1 | cursor · composer · high | 2026-10-31 |
+| 5 | Digest route tests | #2, #3 | cursor · composer · high | 2026-10-31 |
+| 6 | Preview for review | #2 | cursor · composer · high | 2026-10-31 |
+| 7 | Clean up marker + plan | #6 | cursor · composer · high | 2026-10-31 |
+
+Preview: https://kborzy.github.io/rig-preview/
