@@ -3,3 +3,7 @@ var/
 .env
 *.png
 .claude/skills
+
+# local challenge artefacts
+preview*.html
+
